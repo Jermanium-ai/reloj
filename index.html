@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Hey Leshine 🌸</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- =====================================================================
+     🌸 LESHINE EXPERIENCE — EDIT GUIDE
+     =====================================================================
+     IMAGES: Place your image files in the /images/ folder.
+     Then replace the src values inside each scene below.
+     Each scene is clearly labelled. Gradients show if no image is used.
+
+     TEXTS: Search for the ✏️ EDIT comments to find editable text spots.
+     ===================================================================== -->
+
+<!-- SCREEN 0: OPENING -->
+<div class="screen active" id="screen-0">
+  <div class="opening-bg">
+    <!-- 🖼️ EDIT: uncomment and set your background image -->
+    <!-- <img src="images/opening-bg.jpg" class="scene-bg-img" alt=""> -->
+    <div class="petal-container" id="petals-0"></div>
+  </div>
+  <div class="opening-content">
+    <p class="opening-sub">a little something for</p>
+    <h1 class="opening-name">Leshine</h1>
+    <div class="flower-divider">✦ 🌸 ✦</div>
+    <p class="tap-hint">tap anywhere to begin</p>
+  </div>
+</div>
+
+<!-- SCREEN 1: ARE YOU EXCITED -->
+<div class="screen" id="screen-1">
+  <div class="intro-bg warm-bg">
+    <div class="petal-container" id="petals-1"></div>
+  </div>
+  <div class="intro-content">
+    <p class="step-label">01 / 04</p>
+    <h2 class="intro-question">Are you<br/><em>excited?</em></h2>
+    <p class="intro-sub">Something beautiful is waiting&nbsp;for&nbsp;you.</p>
+    <button class="next-btn" id="excited-btn">Yes, show me ✨</button>
+  </div>
+</div>
+
+<!-- SCREEN 2: TILT LEFT -->
+<div class="screen" id="screen-2">
+  <div class="intro-bg teal-bg"></div>
+  <div class="tutorial-content">
+    <p class="step-label">02 / 04</p>
+    <div class="phone-icon" id="phone-left">📱</div>
+    <p class="tilt-instruction">Tilt your phone<br/><strong>LEFT</strong></p>
+    <div class="letter-stage" id="letter-stage-left"></div>
+    <p class="tilt-hint">← lean it gently</p>
+    <button class="skip-btn" id="skip-left">skip →</button>
+  </div>
+</div>
+
+<!-- SCREEN 3: TILT RIGHT -->
+<div class="screen" id="screen-3">
+  <div class="intro-bg rose-bg"></div>
+  <div class="tutorial-content">
+    <p class="step-label">03 / 04</p>
+    <div class="phone-icon" id="phone-right">📱</div>
+    <p class="tilt-instruction">Now tilt<br/><strong>RIGHT</strong></p>
+    <div class="letter-stage" id="letter-stage-right"></div>
+    <p class="tilt-hint">lean right →</p>
+    <button class="skip-btn" id="skip-right">skip →</button>
+  </div>
+</div>
+
+<!-- SCREEN 4: NAME REVEAL -->
+<div class="screen" id="screen-4">
+  <div class="intro-bg gold-bg">
+    <div class="petal-container" id="petals-4"></div>
+  </div>
+  <div class="reveal-content">
+    <p class="step-label">04 / 06</p>
+    <p class="reveal-pre">your name, in lights ✨</p>
+    <div class="name-reveal" id="name-reveal"></div>
+    <p class="reveal-sub">Swipe right to enter your world</p>
+    <div class="swipe-arrow-anim">→</div>
+  </div>
+</div>
+
+<!-- CAROUSEL -->
+<div class="carousel-wrap" id="carousel-wrap">
+
+  <!-- SLIDE 1: COZY ROOM -->
+  <div class="slide" id="slide-0">
+    <div class="scene-layer">
+      <!-- 🖼️ EDIT: your cozy room photo -->
+      <img src="images/Cozy Room.jpg" class="scene-bg-img" alt="cozy room">
+      <div class="fallback-bg cozy-bg"></div>
+    </div>
+    <div class="parallax-layer" id="par-0">
+      <span class="floater cat-float" style="bottom:16%;left:10%" id="cat-tap">🐱</span>
+      <span class="floater" style="bottom:28%;right:14%">🕯️</span>
+      <span class="floater" style="bottom:20%;right:30%">📖</span>
+      <span class="floater" style="bottom:33%;left:22%">☕</span>
+      <span class="floater" style="top:18%;right:12%">🪴</span>
+    </div>
+    <div class="slide-caption">
+      <h2>A Cozy Corner</h2>
+      <p>Warm light, soft blankets, a purring cat.</p>
+    </div>
+    <p class="tilt-guide">tilt to look around ✦</p>
+    <div class="nav-dots" data-active="0"></div>
+  </div>
+
+  <!-- SLIDE 2: HYDRANGEA GARDEN -->
+  <div class="slide" id="slide-1">
+    <div class="scene-layer">
+      <!-- 🖼️ EDIT: your hydrangea photo -->
+      <img src="images/hydrangea.jpg" class="scene-bg-img" alt="hydrangeas">
+      <div class="fallback-bg garden-bg"></div>
+    </div>
+    <div class="parallax-layer" id="par-1">
+      <span class="floater big-f" style="bottom:8%;left:4%">💐</span>
+      <span class="floater big-f" style="bottom:6%;right:6%">🌸</span>
+      <span class="floater big-f" style="bottom:12%;left:38%">🌺</span>
+      <span class="floater butterfly" style="top:28%;right:18%">🦋</span>
+      <span class="floater butterfly" style="top:42%;left:12%">🦋</span>
+      <span class="floater" style="top:20%;left:30%">🌼</span>
+    </div>
+    <div class="slide-caption light-caption">
+      <h2>Hydrangea Dreams</h2>
+      <p>Blooming just for you, in every shade of&nbsp;blue.</p>
+    </div>
+    <p class="tilt-guide dark-guide">tilt to feel the breeze ✦</p>
+    <div class="nav-dots" data-active="1"></div>
+  </div>
+
+  <!-- SLIDE 3: HUMMINGBIRD FOREST -->
+  <div class="slide" id="slide-2">
+    <div class="scene-layer">
+      <!-- 🖼️ EDIT: your forest / hummingbird photo -->
+      <img src="images/hummingbird.jpg" class="scene-bg-img" alt="forest">
+      <div class="fallback-bg forest-bg"></div>
+    </div>
+    <div class="parallax-layer" id="par-2">
+      <span class="floater hbird" style="top:22%;right:18%">🐦</span>
+      <span class="floater hbird" style="top:36%;left:16%">🐦</span>
+      <span class="floater hbird" style="top:18%;left:42%">🦜</span>
+      <span class="floater leaf" style="top:52%;right:8%">🍃</span>
+      <span class="floater leaf" style="top:58%;left:6%">🌿</span>
+      <span class="floater leaf" style="bottom:20%;left:40%">🍂</span>
+    </div>
+    <div class="slide-caption">
+      <h2>Where Birds Sing</h2>
+      <p>Hummingbirds dancing between the branches.</p>
+    </div>
+    <p class="tilt-guide">tilt to watch them fly ✦</p>
+    <div class="nav-dots" data-active="2"></div>
+  </div>
+
+  <!-- SLIDE 4: MESSAGE -->
+  <div class="slide" id="slide-3">
+    <div class="scene-layer">
+      <div class="fallback-bg message-bg"></div>
+      <div class="petal-container" id="petals-msg"></div>
+    </div>
+    <div class="message-content">
+      <div class="message-card">
+        <div class="msg-icon">🌸</div>
+        <!-- ✏️ EDIT: your personal message below -->
+        <p class="msg-text">
+          Made this whole thing just to see your reaction.<br/><br/>
+          Hope the flowers, the birds, and the cat were good company.<br/><br/>
+          Sorry for using your name without permission, <em>Leshine</em> —<br/>
+          but hey, it looked good up there.&nbsp;😗
+        </p>
+        <!-- ✏️ EDIT: sign off -->
+        <div class="msg-sign">— your favourite experiment 🌿</div>
+      </div>
+    </div>
+    <div class="nav-dots" data-active="3"></div>
+  </div>
+
+</div><!-- /carousel-wrap -->
+
+<!-- Easter egg cat popup -->
+<div class="cat-popup" id="cat-popup"><span>😸</span><p>meow~</p></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

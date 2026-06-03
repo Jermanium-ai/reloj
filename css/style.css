@@ -1,0 +1,116 @@
+/* ============================================================
+   LESHINE EXPERIENCE — CSS
+   ============================================================ */
+:root {
+  --cream:#fdf6ee;--blush:#f2c4ce;--rose:#d4748a;
+  --teal:#7fb5b0;--forest:#4a7c6f;--gold:#e8c97e;
+  --warm:#f5e6d3;--text-dark:#3a2a2a;--text-mid:#6b4c4c;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;font-family:'Lato',sans-serif;background:var(--cream);touch-action:none}
+
+/* ── SCREENS */
+.screen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .6s ease;z-index:10}
+.screen.active{opacity:1;pointer-events:all}
+.opening-bg,.intro-bg{position:absolute;inset:0;z-index:0}
+.warm-bg{background:linear-gradient(160deg,#fdf0e8 0%,#f9d5c0 60%,#f0b8b8 100%)}
+.teal-bg{background:linear-gradient(160deg,#e0f0ef 0%,#a8d5d0 60%,#7fb5b0 100%)}
+.rose-bg{background:linear-gradient(160deg,#fce8ec 0%,#f2c4ce 60%,#d4748a 100%)}
+.gold-bg{background:linear-gradient(160deg,#fdf6d3 0%,#f5e4a0 60%,#e8c97e 100%)}
+.opening-bg{background:linear-gradient(160deg,#fdf6ee 0%,#fce8ec 50%,#f2c4ce 100%)}
+
+/* ── OPENING */
+.opening-content{position:relative;z-index:2;text-align:center;padding:2rem}
+.opening-sub{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);margin-bottom:.5rem;font-weight:300}
+.opening-name{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,18vw,5.5rem);font-weight:700;color:var(--text-dark);line-height:1;letter-spacing:-.02em}
+.flower-divider{margin:1.2rem 0;font-size:1.2rem;color:var(--rose);letter-spacing:.4em}
+.tap-hint{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-mid);opacity:.7;animation:blink 2.2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:.5}50%{opacity:1}}
+
+/* ── INTRO */
+.intro-content,.tutorial-content,.reveal-content{position:relative;z-index:2;text-align:center;padding:2rem 1.5rem;width:100%}
+.step-label{font-size:.7rem;letter-spacing:.25em;color:rgba(60,40,40,.45);text-transform:uppercase;margin-bottom:2rem}
+.intro-question{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,14vw,4.5rem);color:var(--text-dark);line-height:1.15;margin-bottom:1rem}
+.intro-question em{font-style:italic;color:var(--rose)}
+.intro-sub{font-size:1rem;color:var(--text-mid);margin-bottom:2.5rem;font-weight:300}
+.next-btn{background:var(--rose);color:#fff;border:none;padding:.9rem 2.5rem;border-radius:50px;font-family:'Lato',sans-serif;font-size:1rem;letter-spacing:.05em;cursor:pointer;box-shadow:0 8px 24px rgba(212,116,138,.35);transition:transform .15s,box-shadow .15s}
+.next-btn:active{transform:scale(.96)}
+
+/* ── TUTORIAL */
+.phone-icon{font-size:3.5rem;margin-bottom:1rem;display:block;transition:transform .3s ease}
+.tilt-instruction{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,10vw,2.8rem);color:var(--text-dark);line-height:1.2;margin-bottom:1.5rem}
+.tilt-instruction strong{color:var(--rose)}
+.letter-stage{min-height:80px;display:flex;justify-content:center;align-items:center;gap:.25rem;flex-wrap:wrap;margin:1rem auto;max-width:300px}
+.letter-char{font-family:'Playfair Display',serif;font-size:clamp(2rem,12vw,3.5rem);font-weight:700;color:var(--text-dark);opacity:0;transform:translateY(-60px) rotate(-8deg);transition:all .45s cubic-bezier(.34,1.56,.64,1);display:inline-block;line-height:1}
+.letter-char.landed{opacity:1;transform:translateY(0) rotate(0deg)}
+.tilt-hint{font-size:.8rem;color:rgba(60,40,40,.5);letter-spacing:.15em;margin-top:.5rem}
+.skip-btn{margin-top:2rem;background:transparent;border:1px solid rgba(60,40,40,.25);color:rgba(60,40,40,.5);padding:.5rem 1.2rem;border-radius:50px;font-size:.78rem;letter-spacing:.1em;cursor:pointer}
+
+/* ── REVEAL */
+.reveal-pre{font-size:.8rem;letter-spacing:.2em;color:var(--text-mid);text-transform:uppercase;margin-bottom:1rem}
+.name-reveal{display:flex;justify-content:center;gap:.2rem;flex-wrap:wrap;margin:1rem auto 1.5rem}
+.reveal-sub{font-size:.9rem;color:var(--text-mid);margin-bottom:1rem}
+.swipe-arrow-anim{font-size:2rem;color:var(--rose);animation:swipeHint 1.5s ease-in-out infinite}
+@keyframes swipeHint{0%,100%{transform:translateX(0);opacity:.6}50%{transform:translateX(14px);opacity:1}}
+
+/* ── CAROUSEL */
+.carousel-wrap{position:fixed;inset:0;display:flex;opacity:0;pointer-events:none;transition:opacity .8s ease;overflow:hidden;z-index:5}
+.carousel-wrap.visible{opacity:1;pointer-events:all}
+.slide{min-width:100%;height:100%;position:relative;overflow:hidden;flex-shrink:0}
+
+/* Fallback backgrounds */
+.fallback-bg{position:absolute;inset:0}
+.cozy-bg{background:radial-gradient(ellipse at 20% 80%,#f5c57a44 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,#f0a07044 0%,transparent 55%),linear-gradient(160deg,#3d2b1f 0%,#6b3f28 40%,#8b5e3c 70%,#c4845a 100%)}
+.garden-bg{background:radial-gradient(ellipse at 50% 90%,#b8d4f044 0%,transparent 60%),radial-gradient(ellipse at 20% 30%,#d4b8e044 0%,transparent 50%),linear-gradient(170deg,#b8d4b8 0%,#8fba9f 30%,#6b9e8a 60%,#4a8070 100%)}
+.forest-bg{background:radial-gradient(ellipse at 50% 0%,#a8c87044 0%,transparent 60%),linear-gradient(170deg,#1a3020 0%,#2d5040 40%,#3d6b50 70%,#4a8060 100%)}
+.message-bg{background:linear-gradient(160deg,#fdf0e8 0%,#fce8ec 50%,#f5dde8 100%)}
+.scene-bg-img{width:100%;height:100%;object-fit:cover;object-position:center}
+.scene-layer{position:absolute;inset:0;z-index:0}
+
+/* ── PARALLAX */
+.parallax-layer{position:absolute;inset:0;z-index:2;pointer-events:none}
+.floater{position:absolute;font-size:2.2rem;filter:drop-shadow(0 4px 8px rgba(0,0,0,.2));transition:transform .1s linear;user-select:none}
+.cat-float{font-size:2.6rem;cursor:pointer;pointer-events:all}
+.big-f{font-size:3rem}
+.butterfly{font-size:1.8rem;animation:flutter 3s ease-in-out infinite}
+.hbird{font-size:2rem;animation:hover-bird 2.5s ease-in-out infinite}
+.leaf{font-size:1.8rem;animation:sway 4s ease-in-out infinite}
+@keyframes flutter{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-12px) rotate(5deg)}}
+@keyframes hover-bird{0%,100%{transform:translateY(0) translateX(0)}33%{transform:translateY(-8px) translateX(4px)}66%{transform:translateY(4px) translateX(-4px)}}
+@keyframes sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+
+/* ── CAPTIONS */
+.slide-caption{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 1.8rem 4rem;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 100%);z-index:3}
+.slide-caption h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,8vw,2.6rem);color:#fff;font-weight:700;margin-bottom:.4rem;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.slide-caption p{font-size:.9rem;color:rgba(255,255,255,.85);font-weight:300;letter-spacing:.03em}
+.light-caption h2{color:var(--text-dark);text-shadow:none}
+.light-caption p{color:var(--text-mid)}
+.light-caption{background:linear-gradient(to top,rgba(255,255,255,.7) 0%,transparent 100%)}
+.tilt-guide{position:absolute;top:1.2rem;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.18em;color:rgba(255,255,255,.75);text-transform:uppercase;z-index:4;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.dark-guide{color:rgba(60,40,40,.6);text-shadow:none}
+
+/* ── NAV DOTS */
+.nav-dots{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:.4rem}
+.dot-pip{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.35);transition:all .3s}
+.dot-pip.on{background:#fff;width:18px;border-radius:3px}
+.dot-pip.on.dark-dot{background:var(--rose)}
+.dot-pip.dark-dot{background:rgba(100,60,60,.25)}
+
+/* ── MESSAGE */
+.message-content{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3;padding:2rem 1.5rem}
+.message-card{background:rgba(255,255,255,.82);backdrop-filter:blur(10px);border-radius:24px;padding:2.2rem 1.8rem;text-align:center;box-shadow:0 12px 40px rgba(212,116,138,.15);border:1px solid rgba(255,255,255,.9);max-width:340px}
+.msg-icon{font-size:2.5rem;margin-bottom:1.2rem}
+.msg-text{font-size:.95rem;color:var(--text-dark);line-height:1.75;font-weight:300}
+.msg-text em{font-family:'Playfair Display',serif;font-style:italic;color:var(--rose)}
+.msg-sign{margin-top:1.5rem;font-size:.82rem;color:var(--text-mid);font-style:italic;letter-spacing:.03em}
+
+/* ── PETALS */
+.petal-container{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.petal{position:absolute;top:-20px;animation:petalFall linear infinite;opacity:.7}
+@keyframes petalFall{0%{transform:translateY(-20px) rotate(0deg) translateX(0);opacity:0}10%{opacity:.7}90%{opacity:.5}100%{transform:translateY(110vh) rotate(360deg) translateX(30px);opacity:0}}
+
+/* ── CAT EASTER EGG */
+.cat-popup{position:fixed;bottom:6rem;left:50%;transform:translateX(-50%) scale(0);background:rgba(255,255,255,.92);border-radius:16px;padding:.75rem 1.5rem;text-align:center;z-index:100;pointer-events:none;transition:transform .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.cat-popup.show{transform:translateX(-50%) scale(1)}
+.cat-popup span{font-size:2rem;display:block}
+.cat-popup p{font-size:.8rem;color:var(--text-mid);margin-top:.2rem}
